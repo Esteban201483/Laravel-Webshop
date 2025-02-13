@@ -1,0 +1,17 @@
+#header{
+    padding: 20px;
+    background-color: #3C393A;
+}
+
+#main-menu{
+    color: #705C53;
+    background-color: white;
+}
+
+.menu-item{
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    font-weight: 700;
+}
