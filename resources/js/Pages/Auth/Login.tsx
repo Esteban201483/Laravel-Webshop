@@ -14,6 +14,9 @@ export default function Login({
     status?: string;
     canResetPassword: boolean;
 }) {
+
+    window.sessionStorage.removeItem("authenticated");
+
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
@@ -24,7 +27,15 @@ export default function Login({
         e.preventDefault();
 
         post(route('login'), {
-            onFinish: () => reset('password'),
+            onFinish: () => {
+                reset('password');
+            },
+            onSuccess: () => {
+                window.sessionStorage.setItem("authenticated","yes");
+            },
+            onError: () =>{
+                
+            }
         });
     };
 

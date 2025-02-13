@@ -1,0 +1,25 @@
+#products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 10px; /* Space between grid items */
+}
+
+.product{
+    padding: 16px;
+    width: fit-content;
+    width: 100%;
+}
+
+.product-name{
+    font-weight: 600;
+    font-size: 1.15em;
+}
+
+#products-container .secondary-button, #products-container .main-button{
+    /*width: 50%;*/
+    margin: 6px 0px;
+}
+
+.product-action-container{
+    width: 100%;
+}

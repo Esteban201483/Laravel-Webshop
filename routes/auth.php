@@ -6,6 +6,9 @@ use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordController;
+use App\Http\Controllers\Auth\CatalogController;
+use App\Http\Controllers\Auth\ContactController;
+use App\Http\Controllers\Auth\WishlistController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -16,6 +19,10 @@ Route::middleware('guest')->group(function () {
         ->name('register');
 
     Route::post('register', [RegisteredUserController::class, 'store']);
+
+    Route::get('contact', [ ContactController::class, 'create'])->name('contact');
+    Route::get('catalog', [ CatalogController::class, 'create'])->name('catalog');
+    Route::get('wishlist', [WishlistController::class, 'create'])->name('wishlist');
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');
@@ -56,4 +63,11 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
+
+    Route::get('contact', [ ContactController::class, 'create'])->name('contact');
+    Route::get('catalog', [ CatalogController::class, 'create'])->name('catalog');
+
+    Route::get('wishlist', [WishlistController::class, 'create'])->name('wishlist');
+    Route::delete('wishlist', [WishlistController::class, 'delete'])->name('wishlist');
+    Route::put('wishlist', [WishlistController::class, 'add'])->name('wishlist');
 });

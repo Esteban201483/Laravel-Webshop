@@ -158,7 +158,6 @@ export default function Authenticated({
                                 href={route('logout')}
                                 as="button"
                             >
-                                Log Out
                             </ResponsiveNavLink>
                         </div>
                     </div>
