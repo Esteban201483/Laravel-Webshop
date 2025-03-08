@@ -6,12 +6,90 @@
 #main-menu{
     color: #705C53;
     background-color: white;
+    width: 90%;
+}
+
+.menusContainer{
+    display: flex;
+    justify-content: center;
 }
 
 .menu-item{
     cursor: pointer;
 }
 
+#right-menu{
+    width: 10%; 
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
 .menu-item:hover{
     font-weight: 700;
+}
+
+.right-icon{
+    cursor: pointer;
+    color: #705C53;
+    padding: 8px;
+    z-index: 3;
+}
+
+.right-icon:hover{
+    /*position: relative;*/
+    color: black;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 0 0 2px white;
+
+}
+
+.right-icon.active{
+    position: relative;
+    color: white;
+    background-color: #705C53;
+    box-shadow: 0 0 0 2px white;
+
+}
+
+.overlay-menu {
+    top: 8%;
+    right: 2%;
+    /*right: -100%; /* Initially hidden off-screen */
+    width: 200px;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 1px saddlebrown;
+    /*box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);*/
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+    position: absolute;
+    color: #705C53;
+    z-index: 2;
+}
+
+.overlay-menu .item:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* Show overlay when active */
+.overlay.active {
+    right: 0;
+}
+
+/* Close button styling */
+.overlay .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Wishlist button styling */
+.wishlist-button {
+    cursor: pointer;
 }

@@ -35,7 +35,7 @@ export default function Wishlist({products}: PageProps<{products: any}>){
                 products.map((product:any , index:any) => (
                     <div className="product">
                         <p className="product-name">{product.name}</p>
-                        <p>${product.base_price}</p>
+                        <p>${product.base_price.toFixed(2)}</p>
                         <button  className="secondary-button" onClick={() => removeFromWishlist(product.id)}>Remove From Wishlist</button>
                     </div>
                 ))
