@@ -3,28 +3,58 @@
 @tailwind utilities;
 
 
+:root{
+    --terciary-color: #3c393a;
+}
+
 body{
     background-color: rgb(250, 248, 248);
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .main-component{
     padding: 20px;
-    background-color: white;
+    background-color: white; 
 }
 
 .secondary-button{
     background-color: rgb(250, 248, 248);
     padding: 4px 8px;
-    width: 100%;
+    width: 50%;
     font-size: 1em;
     font-weight: 600;
+    min-width: 120px;
+}
+
+.secondary-button:hover{
+    background-color: rgb(236, 234, 234);
+    cursor: pointer;
+}
+
+.main-button:hover{
+    background-color: rgb(66, 62, 62);
+    cursor: pointer;
 }
 
 .main-button{
     background-color: black;
     color: white;
-    padding: 4px 8px;
-    width: 100%;
+    padding: 6px 8px;
+    width: 50%;
     font-size: 1em;
     font-weight: 600;
+
+    min-width: 120px;
+}
+
+.terciary-button{
+    background-color: var(--terciary-color);
+    color: white;
+    padding: 6px 8px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.terciary-button:hover{
+    background-color: #705C53;
 }

@@ -7,6 +7,8 @@ import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { FormEventHandler } from 'react';
 
+import Header from '@/Layouts/Header';
+
 export default function Login({
     status,
     canResetPassword,
@@ -40,6 +42,8 @@ export default function Login({
     };
 
     return (
+        <>
+        <Header></Header>
         <GuestLayout>
             <Head title="Log in" />
 
@@ -95,7 +99,7 @@ export default function Login({
                                 )
                             }
                         />
-                        <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">
+                        <span className="ms-2 text-sm text-gray">
                             Remember me
                         </span>
                     </label>
@@ -117,5 +121,6 @@ export default function Login({
                 </div>
             </form>
         </GuestLayout>
+        </>
     );
 }

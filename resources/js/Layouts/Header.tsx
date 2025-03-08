@@ -4,7 +4,7 @@ import {isAuthenticated} from '../services/authentication';
 
 import './layouts.css';
 
-export default function Header(){
+export default function Header(){ 
 
     const authenticated = isAuthenticated();
     return(
